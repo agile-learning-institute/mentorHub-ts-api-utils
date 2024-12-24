@@ -1,4 +1,4 @@
-import { createToken } from "./Token"
+import { decodeToken } from "./Token"
 //*************************
 // Current Token is a placeholder object - functionality to be developed and tested
 
@@ -7,7 +7,7 @@ describe("createToken", () => {
         const req = {} as any; // Mock Express Request object (not used here)
 
         // Call the function
-        const result = createToken(req);
+        const result = decodeToken(req);
 
         // Assert the expected output
         expect(result).toEqual({

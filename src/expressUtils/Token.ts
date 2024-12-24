@@ -10,7 +10,7 @@ export interface Token {
  * @param req - Express Request object
  * @returns Token dictionary
  */
-export const createToken = (req: Request): Token => {
+export const decodeToken = (req: Request): Token => {
     // TODO: Extract values from JWT - look at jsonwebtoken library
     const token = {
         userId: "aaaa00000000000000000001",
