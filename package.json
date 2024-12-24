@@ -2,7 +2,7 @@
   "name": "@agile-learning-institute/mentorhub-ts-api-utils",
   "version": "1.0.3",
   "description": "Config, Mongo and Express utilities for the mentorHub platform.",
-  "main": "index.ts",
+  "main": "dist/index.ts",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
