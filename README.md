@@ -178,7 +178,12 @@ If you want to contribute to this library, here are the instructions.
 npm install
 ```
 
-### Build Typescript for deployment
+### Clean build output
+```bash
+npm run clean
+```
+
+### Clean and Build Typescript for deployment
 ```bash
 npm run build
 ```
@@ -194,8 +199,13 @@ NOTE: The MongoIO unit tests are actually integration tests that expect the Ment
 npm run lint
 ```
 
+### Bump patch version before publishing
+```bash
+npm version patch
+```
+
 ### Publish the Package
 NOTE: CI will run ``build``, ``test``, and ``publish`` to deploy new versions.
 ```bash
-npm run publish
+npm run publish-it
 ```

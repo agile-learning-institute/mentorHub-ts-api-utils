@@ -13,7 +13,7 @@ interface ConfigItem {
     from: string;
 }
 
-export default class Config {
+export class Config {
     private static instance: Config; // Singleton 
 
     configItems: ConfigItem[] = [];

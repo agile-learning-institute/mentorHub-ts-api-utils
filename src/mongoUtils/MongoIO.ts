@@ -1,11 +1,11 @@
 import { MongoClient, Db, Collection, InsertOneResult, IntegerType, ObjectId } from 'mongodb';
-import Config from '../config/Config';
+import { Config } from '../config/Config';
 
 
 /********************************************************************************
  * Class Properties
  ********************************************************************************/
-export default class MongoIO {
+export class MongoIO {
   private static instance: MongoIO; // Singleton Instance
   
   private client?: MongoClient;

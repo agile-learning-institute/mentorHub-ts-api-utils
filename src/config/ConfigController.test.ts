@@ -1,4 +1,4 @@
-import ConfigController from './ConfigController';
+import { ConfigController } from './ConfigController';
 import { Request, Response } from 'express';
 
 const mockRequest = (options = {}): Partial<Request> => ({

@@ -3,8 +3,8 @@
  * You can run a mongo container with test data using
  * mh up mongodb
  */
-import MongoIO from './MongoIO';
-import Config from '../config/Config';
+import { MongoIO } from './MongoIO';
+import { Config } from '../config/Config';
 import { ObjectId } from 'mongodb';
 
 describe('MongIO', () => {

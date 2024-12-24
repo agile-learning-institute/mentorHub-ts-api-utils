@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import Config from '../config/Config';
+import { Config } from '../config/Config';
 import { Token, decodeToken } from '../expressUtils/Token';
-export default class ConfigController {
+export class ConfigController {
 
   constructor() {
   }
