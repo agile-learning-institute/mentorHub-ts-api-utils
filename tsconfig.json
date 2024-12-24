@@ -1,24 +1,15 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-    "target": "es2016", 
-    "module": "commonjs", 
-    "strict": true, 
-    "esModuleInterop": true, 
-    "forceConsistentCasingInFileNames": true, 
-    "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "node_modules/*"
-      ]
-    }
+    "target": "es2016",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "outDir": "./dist"
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.test.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

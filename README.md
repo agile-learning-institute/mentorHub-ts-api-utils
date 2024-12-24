@@ -54,9 +54,10 @@ export default class SomeController {
   public getSomething = (req: Request, res: Response) => {
     const token: Token = decodeToken(req);
     const breadcrumb: Breadcrumb = createBreadcrumb(token);
-    const data = {"some":"update"};
-    data.lastSaved = breadcrumb;
     // Do something with token, breadcrumb
+    if (!token.roles.includes("Staff")) throw new Error("Access Denied");
+    const updateData = {"some":"update"};
+    updateData.lastSaved = breadcrumb;
 ```
 
 # Config Utilities
