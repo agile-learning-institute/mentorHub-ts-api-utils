@@ -21,7 +21,7 @@ jobs:
           scope: "@agile-learning-institute"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build package
         run: npm run build

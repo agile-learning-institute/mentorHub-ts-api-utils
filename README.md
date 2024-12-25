@@ -48,7 +48,8 @@ Here is how these methods are used in a Express Controller
 ```ts
 import { Request, Response } from 'express';
 import { Token, decodeToken, Breadcrumb, createBreadcrumb } 
-    from '@agile-learning-institute/mentorhub-ts-api-utils/config';
+    from '@agile-learning-institute/mentorhub-ts-api-utils';
+
 export default class SomeController {
 
   public getSomething = (req: Request, res: Response) => {
@@ -72,7 +73,7 @@ Standard Config
 Standard mentorHub configuration values. Configurations are managed in a consistent way favoring file based configuration values, then environment configuration values, and then default values. See the [Config.ts](./src/config/Config.ts) for details on the configuration values.
 
 ```ts
-import Config from '@agile-learning-institute/mentorhub-ts-api-utils/config';
+import { Config } from '@agile-learning-institute/mentorhub-ts-api-utils';
 config: Config = Config.getInstance();
 console.log(`Built at ${config.BUILT_AT}`)
 ```
@@ -80,7 +81,7 @@ console.log(`Built at ${config.BUILT_AT}`)
 ### config_routes()
  This is a simple express request handler to be used to expose the config data on a config endpoint.
 ```ts
-import ConfigController from '@agile-learning-institute/mentorhub-ts-api-utils/config';
+import { ConfigController } from '@agile-learning-institute/mentorhub-ts-api-utils';config';
 
 const app = express();
 const configController = new ConfigController();
@@ -103,7 +104,7 @@ Simple wrappers for MongoIO and a Config Initializer.
 ### getInstance()
  Get a reference to the Singleton object
 ```ts
-import MongoIO from '@agile-learning-institute/mentorhub-ts-api-utils/config';
+import { MongoIO } from '@agile-learning-institute/mentorhub-ts-api-utils';
 mongoIO = MongoIO.getInstance();
 ```
 
@@ -124,10 +125,10 @@ mongoIO.disconnect()
 ### getDocuments(collection_name, match, project, order)
  This is a convenience method to get a list of documents based on Mongo Match, project, and sort order parameters. 
 ```ts
-match = {"name": {"$regex": query}};
-project = {"_id":1,"name":1};
-order = [('name', 1)];
-documents = mongoIO.getDocuments("COLLECTION_NAME", match, project, order);
+const match = { name: { $regex: query } };
+const project = { _id: 1, name: 1 };
+const order = [{ name: 1 }];
+const documents = mongoIO.getDocuments("COLLECTION_NAME", match, project, order);
 ```
 
 ### getDocument(collection_name, string_id)
