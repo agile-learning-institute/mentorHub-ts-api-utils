@@ -98,6 +98,7 @@ Simple wrappers for MongoIO and a Config Initializer.
 - [createDocument](#createDocumentcollection_name-document) creates a new document
 - [updateDocument](#updateDocumentcollection_name-_id-updates) updates an existing document (by id)
 - [deleteDocument](#deleteDocumentcollection_name-string_id) hard deletes a document (by id) 
+- [encodeDocument]
 
 ## Usage
 
@@ -157,6 +158,13 @@ updated = mongoIO.updateDocument("COLLECTION_NAME", id, patch);
 ```ts
 id = "24-byte-id";
 updated = mongoIO.deleteDocument("COLLECTION_NAME", id);
+```
+
+### encodeDocument(document, idProps, dateProps)
+ This is a convenience method for encoding ObjectID and Date properties of a document
+```ts
+document = {idProp: "123456789012345678901234", dateProp: "2009-10-11T12:34:56.000Z" };
+encodeDocument(document, ["idProp"], ["dateProp"]);
 ```
 
 # Contributing
